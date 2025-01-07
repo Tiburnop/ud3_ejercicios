@@ -1,5 +1,15 @@
 Entrega: Se debe entregar únicamente la URL de proyecto de GitHub mediante el Moodle de la escuela (igformacion.online) en la tarea asociada antes de finalizar el plazo de entrega. El usuario de Github jpaniorte debe tener permisos para clonar el repositorio. Si corresponde, responde a las preguntas en el README.md de la raíz del proyecto.
 
+
+Ejecuta el comando php artisan config:clear para limpiar y cachear la configuración de Laravel.
+Ejecuta el comando php artisan migrate para crear las tablas por defecto definidas en la carpeta database/migrations
+Muestra las tablas:
+docker exec -it mariadb-server mariadb -u root -p
+USE test1;
+SHOW TABLES;
+¿Cuántas tablas aparecen?
+Como mínimo la tabla 1 migration
+
 php artisan migrate: Ejecuta las migraciones pendientes y actualiza la base de datos.
 
 php artisan migrate:status: Muestra el estado de las migraciones, indicando cuáles se han ejecutado y cuáles no.
