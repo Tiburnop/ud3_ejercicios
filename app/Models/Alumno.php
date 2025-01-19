@@ -20,4 +20,21 @@ class Alumno extends Model
     {
         return $this->hasMany(Nota::class);
     }
+
+    // Relación 1:N con Post
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    // Relación N:N con Asignatura
+    public function asignaturas()
+    {
+        return $this->belongsToMany(Asignatura::class, 'alumno_asignatura');
+    }
+    public function perfil()
+    {
+        return $this->hasOne(Perfil::class, 'usuario_id');
+    }
+
 }

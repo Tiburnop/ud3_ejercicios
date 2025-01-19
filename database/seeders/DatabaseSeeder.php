@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             AlumnosTableSeeder::class,
             AsignaturasTableSeeder::class,
             NotasTableSeeder::class,
+            PostSeeder::class,
         ]);
     }    
 }

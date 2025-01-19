@@ -11,10 +11,17 @@ class Asignatura extends Model
     use HasFactory;
 
     protected $table = 'asignaturas';
-    protected $fillable = ['nombre','descripcion'];
+    protected $fillable = ['nombre', 'descripcion'];
 
+    // Relación 1:N con Nota
     public function notas()
     {
         return $this->hasMany(Nota::class);
+    }
+
+    // Relación N:N con Alumno
+    public function alumnos()
+    {
+        return $this->belongsToMany(Alumno::class, 'alumno_asignatura');
     }
 }
